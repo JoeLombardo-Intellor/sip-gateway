@@ -1,5 +1,5 @@
 // index.js
-const sipGateway = require('sip-gateway');
+const sipGateway = require('./src/index.js');
 
 sipGateway.start({
   port: 3000,
