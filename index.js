@@ -1,20 +1,16 @@
-// index.js
-const sipGateway = require('./src/index.js');
+const startGateway = require('./src/index.js');
 
-sipGateway.start({
+startGateway({
   port: 3000,
   portSIP: 5060,
   onListen: () => {
-    console.log('Gateway listening on SIP port 5060 and WebSocket port 3000');
+    console.log('Gateway listening on ports 5060 (SIP) and 3000 (WS)');
   },
   onReceive: (data, stream) => {
-    console.log('Received data:', data);
+    console.log('Received data:', data.length);
   },
   onSend: (data, stream) => {
-    console.log('Sending data:', data);
-  },
-  onConnect: (socket) => {
-    console.log('New connection', socket);
-  },
+    console.log('Sending data:', data.length);
+  }
 });
 
