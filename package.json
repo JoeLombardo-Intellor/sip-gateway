@@ -17,7 +17,7 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint \"src/**/*.js\" --fix"
+    "lint": "eslint \"src/**/*.js\" --fix",
     "start": "node index.js"
   },
   "dependencies": {
